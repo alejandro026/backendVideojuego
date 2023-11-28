@@ -4,7 +4,7 @@ from flask_cors import CORS
 from bson.json_util import dumps
 import json
 
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)  # Esto habilitará CORS para todas las rutas
 app.config["MONGO_URI"] = "mongodb+srv://Johan:Johan@dbloginreact.2ljvu.mongodb.net/AventurasMexicanas"
 mongo = PyMongo(app)
@@ -26,5 +26,5 @@ def get_top_scores():
     return jsonify(top_scores), 200
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=True)

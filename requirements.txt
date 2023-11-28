@@ -2,4 +2,4 @@ Flask
 pymongo
 flask_pymongo
 Gunicorn
-flask-cors
+flask_cors
